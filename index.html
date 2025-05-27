@@ -14,23 +14,35 @@
       sizes="32x32"
       href="./assets/favicon.svg"
     />
-    <script defer src="scripts.js" type="module"></script>
+    <script type="module" src="script.js"></script>
     <title>Kanban Task Management</title>
   </head>
 
-  <body>
+  <body id="dark">
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
     <nav class="side-bar" id="side-bar-div">
-      <div id="side-logo-div">
+      <div>
+        <div id="side-logo-div">
         <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
-      </div>
+        </div>
 
-      <div class="boards-nav-links-div" id="boards-nav-links-div">
+        <div class="boards-nav-links-div" id="boards-nav-links-div">
         <h4 id="headline-sidepanel">ALL BOARDS (1)</h4>
         <button class="board-btn">Launch Career</button>
+        </div>
       </div>
+      <div class="mode-hide" id="mode-hide">
+        <div class="mode-toggle" id="mode-toggle">
+          <span class="switch-align">☀️ <label class="switch">
+            <input type="checkbox" id="mode-toggle-btn">
+            <span class="slider"></span>
+          </label> 🌑</span>
+        </div>
+        <div class="hide-sidebar" id="hide-sidebar">
+          <span>🚫 Hide Sidebar</span>
+        </div>
+      </div>  
     </nav>
-
     <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
     <div id="layout">
       <header id="header" class="sticky-header">

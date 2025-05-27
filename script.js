@@ -113,7 +113,20 @@ function openTaskModal(task) {
  * Deletes existing data when delete task button is clicked
  */
 
-const deleteTaskBtn = document.getElementById("delete-task-btn");
+
+
+/**
+ * changing theme toggle
+ */
+const themeToggle = document.getElementById("mode-toggle-btn");
+
+themeToggle.addEventListener('change', function() {
+    if (themeToggle.checked) {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+})
 
 
 /**
@@ -181,3 +194,4 @@ function initTaskBoard() {
 
 // Wait until DOM is fully loaded
 document.addEventListener("DOMContentLoaded", initTaskBoard);
+
