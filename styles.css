@@ -621,7 +621,6 @@ form select {
 }
 
 .mobile-modal-light {
-  display: flex;
   width: 340px;
   height: 200px;
   background-color: #FFFFFF;
@@ -631,7 +630,6 @@ form select {
   transform: translate(-50%, -40%);
   border-radius: 8px;
   max-width: 600px;
-  padding: 24px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   /*font-family: "Plus Jakarta Sans", sans-serif;*/
   z-index: 1000;
@@ -641,9 +639,57 @@ form select {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.mobile-modal-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.text {
+  font: inherit;
+  margin-left: 25px;
+  font-size: 12px;
+  color: #828FA3;
+  letter-spacing: 2.4px;
+}
+
+.board-btn-modal {
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
+  background-color: #635fc7;
+  color: #fff;
+  border: none;
+  border-radius: 0 100px 100px 0; /* Pill shape only on right side */
+  height: 48px;
+  width: 293px;
+  padding: 28px 12px 28px ;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden; 
+}
+
+.mobile-mode-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 48px;
+  background-color: #F4F7FD;
+  border-radius: 6px;
+  border-width: 0px;
+  margin-left: 40px;
+  margin-top: 25px;
+}
+
+
 .close-btn-mobile {
   background: none;
   border: none;
+  margin-left: 140px;
   font-size: 2.5rem;
   line-height: 1;
   cursor: pointer;

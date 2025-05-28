@@ -138,15 +138,12 @@ showSidebar.addEventListener('click', () => {
  */
 
 const lightSidebar = document.getElementById('logo-mobile');
-const darkSidebar = document.getElementById('logo-dark-mobile');
 const showLightSidebar = document.getElementById('mobile-modal-light');
-const showDarkSidebar = document.getElementById('mobile-modal-dark')
 const closeMobileModalBtn = document.getElementById('close-mobile-modal-btn');
 
 lightSidebar.addEventListener('click', () => {
-  showLightSidebar.showModal()
+  showLightSidebar.showModal();
 })
-
 
 closeMobileModalBtn.addEventListener('click', () => {
   showLightSidebar.close();
@@ -165,6 +162,19 @@ themeToggle.addEventListener('change', function() {
     }
 })
 
+/**
+ * changing mobile theme toggle
+ */
+
+const themeMobileToggle = document.getElementById("mobile-toggle-btn");
+
+themeMobileToggle.addEventListener('change', function() {
+    if (themeMobileToggle.checked) {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+})
 
 /**
  * Sets up modal close behavior.
