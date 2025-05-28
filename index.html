@@ -24,6 +24,7 @@
       <div>
         <div id="side-logo-div">
         <img id="logo" src="./assets/logo-light.svg" alt="logo-light" />
+        <img id="dark-logo" src="./assets/logo-dark.svg" alt="logo-dark" />
         </div>
 
         <div class="boards-nav-links-div" id="boards-nav-links-div">
@@ -33,13 +34,13 @@
       </div>
       <div class="mode-hide" id="mode-hide">
         <div class="mode-toggle" id="mode-toggle">
-          <span class="switch-align">☀️ <label class="switch">
+          <span class="switch-align"><img src="assets/icon-light-theme.svg"/>  <label class="switch">
             <input type="checkbox" id="mode-toggle-btn">
             <span class="slider"></span>
-          </label> 🌑</span>
+          </label> <img src="assets/icon-dark-theme.svg"/></span>
         </div>
         <div class="hide-sidebar" id="hide-sidebar">
-          <span>🚫 Hide Sidebar</span>
+          <span><img src="assets/icon-hide-sidebar.svg"/> Hide Sidebar</span>
         </div>
       </div>  
     </nav>
@@ -51,6 +52,11 @@
             src="./assets/favicon.svg"
             alt="logo-mobile"
             class="logo-mobile"
+          />
+          <img
+            src="./assets/Group 15.png"
+            alt="logo-dark-mobile"
+            class="logo-dark-mobile"
           />
           <h2 class="header-board-name" id="header-board-name">
             Launch Career
@@ -111,9 +117,9 @@
 
         <label for="task-status">Status</label>
         <select id="task-status" name="status" required>
-          <option value="todo">todo</option>
-          <option value="doing">doing</option>
-          <option value="done">done</option>
+          <option value="todo" class="status-col">todo</option>
+          <option value="doing" class="status-col">doing</option>
+          <option value="done" class="status-col">done</option>
         </select>
         <div class="task-btns">
           <button id="save-changes-btn" class="save-changes-btn">
@@ -142,9 +148,9 @@
 
         <label for="new-task-status">Status</label>
         <select id="new-task-status" name="status" required>
-          <option value="todo">todo</option>
-          <option value="doing">doing</option>
-          <option value="done">done</option>
+          <option value="todo" class="status-col">todo</option>
+          <option value="doing" class="status-col">doing</option>
+          <option value="done" class="status-col">done</option>
         </select>
         <div class="new-task-btns">
           <button class="create-task-btn">

@@ -54,6 +54,10 @@ body {
   width: 100%; /* Make logo responsive within container */
 }
 
+#dark-logo {
+  display: none;
+}
+
 .boards-nav-links-div {
   display: flex;
   flex-direction: column;
@@ -174,7 +178,7 @@ h4 {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #20212C;
 }
 
 input:checked + .slider:before {
@@ -227,6 +231,9 @@ header {
   display: none; /* Hidden on desktop; shown on smaller screens */
 }
 
+.logo-dark-mobile {
+  display: none;
+}
 /* ===============
    Board Columns
 ================ */
@@ -351,6 +358,19 @@ dialog {
   /*font-family: "Plus Jakarta Sans", sans-serif;*/
 }
 
+.dark #task-modal {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  border-radius: 8px;
+  width: 479px;
+  height: 479px;
+  max-width: 600px;
+  padding: 24px;
+  background-color: #2B2C37;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Header */
 .modal-header {
   display: flex;
@@ -362,6 +382,12 @@ dialog {
 .modal-header h3 {
   margin: 0;
   font-size: 1.125rem;
+}
+
+.dark .modal-header h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  color: #FFFFFF;
 }
 
 .close-btn {
@@ -410,6 +436,13 @@ dialog {
   border-radius:  100px 100px 100px; 
 }
 
+.dark #task-status {
+  color: #ffffff;
+}
+
+.dark .status-col {
+  color: #000000;
+}
 
 /* New task modal */
 
@@ -442,11 +475,36 @@ dialog {
   z-index: 1000;
 }
 
+.dark #new-task-modal {
+  display: none; 
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  border-radius: 8px;
+  width: 479px;
+  height: 479px;
+  max-width: 600px;
+  padding: 24px;
+  background-color: #2B2C37;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /*font-family: "Plus Jakarta Sans", sans-serif;*/
+  z-index: 1000;
+}
+
 .new-modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+}
+
+.dark .new-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #ffffff;
 }
 
 .new-close-btn {
@@ -478,6 +536,14 @@ dialog {
   width: 425px;
   height: 40px;
   border-radius:  100px 100px 100px;
+}
+
+.dark #new-task-status {
+  color: #ffffff;
+}
+
+.dark .status-col {
+  color: #000000;
 }
 
 /* Form elements */
@@ -532,6 +598,13 @@ form select {
   }
 
   .logo-mobile {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .dark .logo-dark-mobile {
     display: block;
     width: 30px;
     height: 30px;
@@ -612,6 +685,10 @@ form select {
     display: none;
   }
   
+  .dark .logo-dark-mobile {
+    display: block;
+  }
+
   #add-task-btn {
     width: 33px;
     height: 33px;
@@ -647,16 +724,47 @@ form select {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark mode settings */
+
   body.dark {
     background-color: #20212C;
   }
 
-  .task-div {
-    background: #2B2C37;
+  .dark #logo {
+    display: none;
   }
 
-  .side-bar {
+  .dark #dark-logo {
+    display: block;
+    width: 100%;
+  }
+
+  .dark .sticky-header {
     background-color: #2B2C37;
   }
-}
+
+  .dark .logo-mobile {
+    display: none;
+  }
+
+  .dark .header-board-name {
+    color: #FFFFFF;
+  }
+
+  .dark .mode-toggle {
+    background-color: #635FC7;
+  }
+
+  .dark .hide-sidebar {
+    background-color: #635FC7;
+    color: #FFFFFF;
+  }
+
+  .dark .task-div {
+    background-color: #2B2C37;
+    color: #FFFFFF;
+  }
+
+  .dark .side-bar {
+    background-color: #2B2C37;
+  }
