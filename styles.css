@@ -42,7 +42,20 @@ body {
   height: 100vh;
 }
 
+.hidden {
+  display: none;
+}
 
+
+.show-side-bar {
+  position: fixed;
+  background-color: #A8A4FF;
+  border: none;
+  bottom: 20px;
+  width: 56px;
+  height: 48px;
+  border-radius: 0 100px 100px 0;
+}
 
 #side-logo-div {
   margin: 33px 113px 54px 34px; /* Spacing around logo */
@@ -108,14 +121,14 @@ h4 {
   background-color: #F4F7FD;
   border-radius: 6px;
   border-width: 0px;
-  margin-left: 24.5px;
+  margin-left: 24.5px;  
 }
 
 .hide-sidebar {
   font-family: inherit;
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between icon and text */
+  gap: 30px; /* Space between icon and text */
   background-color: #F4F7FD;
   color: #635FC7;
   border: none;
@@ -126,8 +139,14 @@ h4 {
   font-size: 0.9375rem;
   font-weight: bold;
   cursor: pointer;
-  overflow: hidden; /* Prevents overflowed text/icons from showing */
+  overflow: hidden; 
   margin: 0px 0px 15px 0px;
+}
+
+.moon-icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
 }
 
 .switch-align {
@@ -140,6 +159,8 @@ h4 {
   width: 40px;
   height: 20px;
   margin-top: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .switch input {
@@ -331,7 +352,15 @@ h2 {
    Modal Styles
 ================ */
 /* Remove default dialog styles */
-dialog {
+ .task-modal {
+  position: fixed;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.new-task-modal {
   position: fixed;
   border: none;
   padding: 0;
@@ -577,6 +606,61 @@ form select {
   padding-right: 1rem;
 }
 
+
+/* ========================
+   Mobile view side-panel modal
+======================== */
+
+
+.mobile-modal-light {
+  position: fixed;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.mobile-modal-light {
+  display: flex;
+  width: 340px;
+  height: 200px;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  border-radius: 8px;
+  max-width: 600px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /*font-family: "Plus Jakarta Sans", sans-serif;*/
+  z-index: 1000;
+}
+
+#mobile-modal-light::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.close-btn-mobile {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #ea5555;
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  transition-delay: 0.1s; /* Delay before scaling */
+}
+
+.close-btn-mobile:hover {
+  transform: scale(1.15);
+  font-weight: 600;
+}
+
+.close-btn-mobile:focus {
+  outline: none;
+}
+
 /* ========================
    Responsive Styles
 ======================== */
@@ -585,6 +669,10 @@ form select {
 @media screen and (max-width: 1023px) {
   .side-bar {
     display: none; /* Hide sidebar on tablets and smaller */
+  }
+
+  .show-side-bar {
+    display: none;
   }
 
   .side-bar.show-sidebar {
@@ -678,6 +766,10 @@ form select {
     padding: 24px;
   }
 
+  .show-side-bar {
+    display: none;
+  }
+
   .header-board-name {
     display: none;
   }
@@ -701,6 +793,10 @@ form select {
     height: 532px;
   }
 
+  .dark #task-modal {
+    width: 343px;
+    height: 532px;
+  }
   .task-btns {
     display: grid;
   }
@@ -715,6 +811,11 @@ form select {
   }
 
   #new-task-modal {
+    width: 343px;
+    height: 532px;
+  }
+
+  .dark #new-task-modal {
     width: 343px;
     height: 532px;
   }

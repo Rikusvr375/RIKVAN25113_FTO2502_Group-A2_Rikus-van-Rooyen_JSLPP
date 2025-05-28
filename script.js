@@ -110,10 +110,47 @@ function openTaskModal(task) {
 }
 
 /**
- * Deletes existing data when delete task button is clicked
+ * Hide sidebar when button is clicked
  */
 
+const hideSidebar = document.getElementsByClassName("side-bar")[0];
+const hideSidebarBtn = document.getElementById("hide-sidebar");
+const showSidebar = document.getElementById("show-side-bar");
 
+document.addEventListener("DOMContentLoaded", () => {
+  hideSidebar.classList.remove("hidden"); 
+  showSidebar.classList.add("hidden"); 
+});
+
+hideSidebarBtn.addEventListener('click', () => {
+  hideSidebar.classList.add('hidden')
+  showSidebar.classList.remove('hidden')
+})
+
+showSidebar.addEventListener('click', () => {
+  hideSidebar.classList.remove('hidden')
+  showSidebar.classList.add('hidden')
+})
+
+
+/**
+ * mobile modal sidebar
+ */
+
+const lightSidebar = document.getElementById('logo-mobile');
+const darkSidebar = document.getElementById('logo-dark-mobile');
+const showLightSidebar = document.getElementById('mobile-modal-light');
+const showDarkSidebar = document.getElementById('mobile-modal-dark')
+const closeMobileModalBtn = document.getElementById('close-mobile-modal-btn');
+
+lightSidebar.addEventListener('click', () => {
+  showLightSidebar.showModal()
+})
+
+
+closeMobileModalBtn.addEventListener('click', () => {
+  showLightSidebar.close();
+});
 
 /**
  * changing theme toggle

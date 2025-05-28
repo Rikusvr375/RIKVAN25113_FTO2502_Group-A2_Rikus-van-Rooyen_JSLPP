@@ -20,6 +20,7 @@
 
   <body id="dark">
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
+    <button class="show-side-bar" id="show-side-bar" ><img src="assets/updated-eyes.png"/></button>
     <nav class="side-bar" id="side-bar-div">
       <div>
         <div id="side-logo-div">
@@ -34,13 +35,13 @@
       </div>
       <div class="mode-hide" id="mode-hide">
         <div class="mode-toggle" id="mode-toggle">
-          <span class="switch-align"><img src="assets/icon-light-theme.svg"/>  <label class="switch">
+          <span class="switch-align"><img src="assets/updated-sun.png"/>  <label class="switch">
             <input type="checkbox" id="mode-toggle-btn">
             <span class="slider"></span>
-          </label> <img src="assets/icon-dark-theme.svg"/></span>
+          </label> <img src="assets/updated-moon.png" class="moon-icon"/></span>
         </div>
         <div class="hide-sidebar" id="hide-sidebar">
-          <span><img src="assets/icon-hide-sidebar.svg"/> Hide Sidebar</span>
+          <img src="assets/updated-no-icon.png" class="hide-img"/><span>Hide Sidebar</span>
         </div>
       </div>  
     </nav>
@@ -52,11 +53,13 @@
             src="./assets/favicon.svg"
             alt="logo-mobile"
             class="logo-mobile"
+            id="logo-mobile"
           />
           <img
             src="./assets/Group 15.png"
             alt="logo-dark-mobile"
             class="logo-dark-mobile"
+            id="logo-dark-mobile"
           />
           <h2 class="header-board-name" id="header-board-name">
             Launch Career
@@ -66,6 +69,21 @@
             +<span>Add New task</span>
           </button>
       </header>
+      <div id="mobile-view-sidebar" class="mobile-modal">
+        <dialog id="mobile-modal-light" class="mobile-modal-light">
+         
+          <div class="mobile-modal-header">
+            <p>ALL BOARDS (1)</p>
+          <button type="button" class="close-btn-mobile" id="close-mobile-modal-btn">
+            &times;
+          </button>
+        </div>
+        </dialog>
+      
+        <dialog id="mobile-modal-dark" class="mobile-modal-dark">
+
+        </dialog>
+      </div>
 
       <div class="container">
         <main class="card-column-main">
@@ -100,7 +118,7 @@
       </div>
     </div>
     <!-- Modal: Displays each tasks details when the task is clicked -->
-    <dialog id="task-modal">
+    <dialog id="task-modal" class="task-modal">
       <form method="dialog" id="task-form">
         <div class="modal-header">
           <h3>Task</h3>
@@ -131,7 +149,7 @@
         </div>
       </form>
     </dialog>
-    <dialog id="new-task-modal">
+    <dialog id="new-task-modal" class="new-task-modal">
       <form method="new-dialog" id="new-task-form">
         <div class="new-modal-header">
           <h3>Add new Task</h3>
