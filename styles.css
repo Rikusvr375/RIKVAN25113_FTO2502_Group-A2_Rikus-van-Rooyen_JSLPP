@@ -625,7 +625,7 @@ form select {
   height: 200px;
   background-color: #FFFFFF;
   position: fixed;
-  top: 40%;
+  top: 22%;
   left: 50%;
   transform: translate(-50%, -40%);
   border-radius: 8px;
@@ -633,6 +633,10 @@ form select {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   /*font-family: "Plus Jakarta Sans", sans-serif;*/
   z-index: 1000;
+}
+
+.dark .mobile-modal-light {
+  background-color: #3E3F4E;
 }
 
 #mobile-modal-light::backdrop {
@@ -685,6 +689,9 @@ form select {
   margin-top: 25px;
 }
 
+.dark .mobile-mode-toggle {
+  background-color: #635FC7;
+}
 
 .close-btn-mobile {
   background: none;
