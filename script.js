@@ -22,26 +22,48 @@ function saveTasks() {
 }
 
 /**
+ * Showsl loading indicator.
+ */
+function showLoadingIndicator() {
+  const loadingIndicator = document.getElementById("loading-indicator");
+  if (loadingIndicator) {
+    loadingIndicator.classList.remove("hidden");
+  }
+}
+
+/**
+ * Hides loading indicator.
+ */
+function hideLoadingIndicator() {
+  const loadingIndicator = document.getElementById("loading-indicator");
+  if (loadingIndicator) {
+    loadingIndicator.classList.add("hidden");
+  }
+}
+
+/**
  * Fetches tasks from the API if localStorage is empty.
  * @returns {Promise<Array<Object>>} Array of task objects.
  */
 async function fetchTasks() {
-  // If localStorage has tasks, return them
   if (tasks.length > 0) {
     return tasks;
   }
 
   // Otherwise, fetch from API
+  showLoadingIndicator();
   try {
     const response = await fetch(API_BASE_URL);
     if (!response.ok) throw new Error(`Failed to fetch tasks: ${response.status}`);
     tasks = await response.json();
-    saveTasks(); // Cache tasks in localStorage
+    saveTasks(); 
     return tasks;
   } catch (error) {
     console.error("Error fetching tasks:", error);
     alert("Failed to load tasks from server. Starting with empty task list.");
-    return tasks; // Return empty tasks array
+    return tasks; 
+  } finally {
+    hideLoadingIndicator();
   }
 }
 
@@ -204,12 +226,14 @@ function setupModalHandlers() {
 
   deleteBtn.addEventListener("click", () => {
     const taskId = parseInt(modal.dataset.taskId);
-    const success = deleteTask(taskId);
-    if (success) {
-      renderTasks(tasks);
-      modal.close();
-    }
-  });
+    const taskTitle = document.getElementById("task-title").value;
+    if (confirm(`Are you sure you want to delete the task "${taskTitle}"?`)) {
+      const success = deleteTask(taskId);
+      if (success) {
+        renderTasks(tasks);
+        modal.close();
+      }
+    }});
 }
 
 /**

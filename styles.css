@@ -30,6 +30,60 @@ body {
 }
 
 /* ================
+   Loading Indicator
+================ */
+.loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1001; /* Above modals and backdrop */
+  box-shadow: var(--primary-box-shadow);
+}
+
+.dark .loading-indicator {
+  background: rgba(43, 44, 55, 0.95); /* Matches .dark .task-modal */
+  color: #ffffff;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--secondary-font-color);
+  border-top: 4px solid #635fc7; /* Matches your primary button color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.dark .spinner {
+  border: 4px solid #828fa3;
+  border-top: 4px solid #a8a4ff; /* Lighter shade for dark mode */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-indicator p {
+  margin-top: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--primary-font-color);
+}
+
+.dark .loading-indicator p {
+  color: #ffffff;
+}
+
+/* ================
    Sidebar Layout
 ================ */
 .side-bar {
