@@ -2,13 +2,14 @@
 A **web-based Kanban board application** for organizing and managing tasks efficiently. Users can create, update, and delete tasks, categorize them into **TODO**, **DOING**, and **DONE** columns, and toggle between **light and dark themes**. It features a **responsive design** with a sidebar for navigation and modals for task management.
 ---
 ## 📑 Table of Contents
-- [Important Links](#custom-links)
-- [Setup Guide](#setup-guide)  
-- [User Guide](#user-guide)  
-- [Technologies Used](#technologies-used)  
+- [Important Links]
+- [Setup Guide]  
+- [User Guide] 
+- [Technologies Used]
 ---
 
 ## 🔗 Important Links
+- **Presentation**: [App Presentation]()
 - **Live Demo**: [Live App Link](https://kanbanboardtaskmanager.netlify.app/)
 - **API Source**: [JSL Kanban API](https://jsl-kanban-api.vercel.app/)
 - **Design Inspiration**: [Figma design link](https://www.figma.com/design/y7bFCUYL5ZHfPeojACBXg2/Challenges-%7C-JSL?node-id=6033-11092&t=mAqn98yM0oisQ0Hf-0)
