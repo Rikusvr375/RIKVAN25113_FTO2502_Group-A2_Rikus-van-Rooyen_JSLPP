@@ -9,7 +9,7 @@ A **web-based Kanban board application** for organizing and managing tasks effic
 ---
 
 ## 🔗 Important Links
-- **Presentation**: [App Presentation]()
+- **Presentation**: [App Presentation](https://www.veed.io/view/fafdb4f6-bf56-489f-99ea-67e9ad67b4c1?panel=share)
 - **Live Demo**: [Live App Link](https://kanbanboardtaskmanager.netlify.app/)
 - **API Source**: [JSL Kanban API](https://jsl-kanban-api.vercel.app/)
 - **Design Inspiration**: [Figma design link](https://www.figma.com/design/y7bFCUYL5ZHfPeojACBXg2/Challenges-%7C-JSL?node-id=6033-11092&t=mAqn98yM0oisQ0Hf-0)
